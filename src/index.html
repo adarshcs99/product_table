@@ -1,19 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery filter 1</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+	<div id="wrapper">
+		<div id="add_product_form">
+			<label for="product_sku">
+				<span>Product SKU</span> 
+				<input type="text" name="product_sku" id="product_sku">
+			</label>
+			<label for="product_name">
+				<span>Product Name</span> 
+				<input type="text" name="product_name" id="product_name">
+			</label>
+			<label for="product_price">
+				<span>Product Price</span> 
+				<input type="text" name="product_price" id="product_price">
+			</label>
+			<label for="product_quantity">
+				<span>Product Quantity</span> 
+				<input type="text" name="product_quantity" id="product_quantity">
+			</label>
+			<p class="submit">
+				<input type="button" name="add_product" id="add_product" value="Add Product" onclick="add_product()">
+			</p>
 
-    <div id="content">
 
-    </div>
-    
+
+			<p class="update">
+				<input type="button" id="update_product" value="UPDATE" onclick="update()">
+			</p>
+
+
+
+		</div>
+		<div id="yes_no">
+			
+		</div>
+		<div id="notification">
+			<div class="success" id ="success">Product Added Successfully.<a href="#" class="close" onclick="closesuccess()">X</a></div>
+			<div class="error" id="error">There is some problem.<a href="#" class="close" onclick="closeerror()">X</a></div>
+		</div>
+		<div id="product_list">
+			<table>
+				<tr>
+					<th>SKU</th>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Action</th>
+				</tr>
+			</table>
+			<table id="display1">
+				
+			</table>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/src/script.js"></script>
+	
 </body>
 </html>
